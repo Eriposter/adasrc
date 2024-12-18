@@ -1,0 +1,201 @@
+{
+  "languages": {
+    "en": "Inglês",
+    "pt": "Português",
+    "fr": "Francês",
+    "select": "Selecione o idioma"
+  },
+  "mouse": "Saiba mais",
+  "watch": "Ver mais",
+  "search": "Pesquisar",
+  "notFound": "Nenhum conteúdo encontrado",
+  "total":"Total de",
+  "records":"registos",
+  "header": {
+    "inicio": "Início",
+    "sobre": {
+      "titulo": "Sobre",
+      "sobreNos": "Sobre nós",
+      "orgaos": "Órgãos",
+      "atribuicoes": "Atribuições"
+    },
+    "legislacao": {
+      "titulo": "Legislação",
+      "se": "Sector Empresarial",
+      "sp": "Sector Público"
+    },
+    "imprensa": {
+      "titulo": "Sala de Imprensa",
+      "noticias": "Notícias",
+      "galeria": "Galeria",
+      "publicacoes": "Publicações",
+      "comunicados": "Comunicados",
+      "faq": "Perguntas Frequentes"
+    },
+    "contacto": "Contacto"
+  },
+  "home": {
+    "banner": {
+      "icon": "Bem Vindo ao CNNCA"
+    },
+    "footer": {
+      "localizacao": "Edifício Minfin, Xº Andar,Luanda – Angola",
+      "sobre-o-cnnca": "Sobre o CNNCA",
+      "press": "Sala de Imprensa",
+      "central": "Central"
+    },
+    "normativo": {
+      "soon": "Em breve",
+      "available": "Disponível",
+      "viewDoc": "Vizualizar o documento"
+    },
+    "sobreHome": {
+      "titulo": "O que é o"
+    },
+    "missaoClara": {
+      "titulo": "O CNNCA tem como",
+      "missao": "Missão Clara",
+      "btn": "Saiba mais "
+    },
+    "noticias": {
+      "span": "Notícias",
+      "titulo": "Recentes",
+      "btnVer": "Ver todas as notícias "
+    },
+    "accoes": {
+      "titulo": "Acções Estratégicas do CNNCA para",
+      "span": "Transformação da Contabilidade",
+      "angola": "em Angola",
+      "subtitulo": "Contribuímos para o desenvolvimento económico do país através da melhoria contínua das práticas contabilísticas.",
+      "btnVer": "Veja também"
+    },
+    "linksUteis": "Links institucionais"
+  },
+  "footer": {
+    "localizacao": " Edifício Minfin, Xº Andar,Luanda – Angola",
+    "sobre-o-cnnca": "Sobre o CNNCA",
+    "press": "Sala de Imprensa",
+    "central": "Central",
+    "direitos": "Todos os direitos reservados."
+  },
+  "sobrePage": {
+    "bannerSobre": {
+      "icon": "Sobre",
+      "titulo": "Sobre o",
+      "subtitulo": "Conheça um pouco sobre quem somos, nossa missão, actividades e objectivos."
+    },
+    "acerca": {
+      "OqueE": "O que é ",
+      "objectivo": "Objectivo"
+    },
+    "pilares": {
+      "titulo": "Os principais pilares do CNNCA",
+      "missao": "Missão",
+      "visao": "Visão"
+    },
+    "principios": {
+      "titulo_inicio": "Os",
+      "titulo_gradient": "princípios",
+      "titulo_others": "que nos guiam",
+      "corpo": "No exercício das suas atribuições, o CNNCA e os seus membros devem pautar a sua actuação pelos seguintes princípios:"
+    },
+    "atribuicoes": {
+      "titulo_inicio": "Atribuições",
+      "titulo": "do Conselho Nacional de Normalização Contabilística de Angola",
+      "subtitulo": "O CNNCA desempenha um papel fundamental na normalização contabilística em Angola",
+      "btnVer": "Veja todas as atribuições"
+    },
+    "estruturaOrganizacional": {
+      "bannerDescricao": "Conheça cada um dos órgãos do CNNCA",
+      "titulo_inicio": "Estrutura",
+      "span": "Organizacional",
+      "subtitulo": "O CNNCA é composto pelos seguintes membros:",
+      "coordenador": "Coordenador",
+      "coordenador_adjuntos": "2 Coordenadores-Adjuntos",
+      "coordenador_adjuntos_tab": "Coordenadores-Adjuntos",
+      "secretario_executivo": "Secretário Executivo",
+      "conselho_geral": "Conselho Geral",
+      "comissoes_tecnicas": "Comissões Técnicas(Para o Sector Empresarial e Sector Público)"
+    },
+    "estatuto": {
+      "titulo": "Estatuto",
+      "organico": "Orgânico",
+      "decreto": "Decreto"
+    }
+  },
+  "atribuicoes": {
+    "span": "Atribuições",
+    "titulo_inicio": "do CNNCA",
+    "bannerDescricao": "Conheça cada uma das responsabilidades do CNNCA",
+    "descricao": "O CNNCA tem as seguintes atribuições"
+  },
+  "legislacao": {
+    "icon": "Legislação",
+    "titulo_inicio": "Sector",
+    "span": "Empresarial",
+    "span2": "Público",
+    "bannerDescricao": "Documentos Legislativos referente ao Sector Empresarial",
+    "bannerDescricao2": "Documentos Legislativos referente ao Sector Público",
+    "todos": "Todos",
+    "decretos": "Decretos executivos",
+    "decretos_pr": "Decretos Presidenciais",
+    "leis": "Leis"
+  },
+  "imprensa": {
+    "icon": "Sala de Imprensa",
+    "noticias": {
+      "titulo_inicio": "sobre o CNNCA",
+      "span": "Noticias",
+      "bannerDescricao": "Mantêm-te actualizado sobre os últimos acontecimentos do CNNCA",
+      "new": "Noticia",
+      "read": "Ler notícia"
+    },
+    "galeria": {
+      "titulo_inicio": "dos eventos",
+      "span": "Galeria",
+      "bannerDescricao": "Galerias dos eventos realizados pelo CNNCA.",
+      "search" :"Pesquisar",
+      "back": "Voltar a Galeria"
+    },
+    "publicacoes": {
+      "span": "Publicações",
+      "bannerDescricao": "Mantêm-te actualizado sobre os últimos acontecimentos do CNNCA.",
+      "todos": "Todos",
+      "normativos": "Normativos",
+      "parecer": "Parecer"
+    },
+    "comunicados": {
+      "span": "Comunicados",
+      "bannerDescricao": "Mantêm-te actualizado sobre os últimos acontecimentos do CNNCA."
+    },
+    "perguntas": {
+      "span": "Perguntas",
+      "titulo_intro": "Frequentes",
+      "bannerDescricao": "Perguntas frequentes sobre o CNNCA.",
+      "titulo": "Perguntas Frequentes",
+      "subtitulo": "Tudo que precisas saber sobre o Conselho Nacional de Normalização Contabilistica de Angola"
+    }
+  },
+  "contactos": {
+    "titulo": "Contacto",
+    "subtitulo": "Fale",
+    "span": "connosco",
+    "txt": "Entre em contato com o CNNCA para mais informações sobre nossas atividades, normas contabilísticas ou qualquer outro assunto relacionado.",
+    "btn": "Saber mais",
+    "form": {
+      "titulo": "Deixe a sua mensagem",
+      "subtitulo": "Nosso horário de atendimento é de segunda à sexta das ",
+      "to": "às",
+      "nome": "Primeiro e ultimo nome",
+      "email": "Email",
+      "phone": "Telefone",
+      "assunto": "Assunto",
+      "mensagem": "Mensagem",
+      "send": "Enviar"
+    },
+    "localizacao": {
+      "titulo": "Localização",
+      "pin": "Edifício Minfin, Xº Andar,Luanda – Angola"
+    }
+  }
+}

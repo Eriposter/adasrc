@@ -1,0 +1,108 @@
+<div [class.fixed-header]="true" [class.opaque-header]="!isOpaque" [class.transparent-header]="isOpaque">
+
+
+  <div class="primeiroHeader d-xl-block d-none">
+    <div class="minfin" style="display: flex; flex-direction: row;">
+      <div class="container" style="display: flex; flex-direction: row; justify-content: space-between;">
+        <a class="navbar-brand" href="https://www.minfin.gov.ao/" target="_blank"><img src="assets/header/minfin-logo.png" width="230px" alt=""></a>
+
+        <div class="card flex justify-content-center mt-4 mb-4">
+          <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true" placeholder="{{'languages.select' | translate}}" (onChange)="changeLanguage(selectedCountry.code)">
+              <ng-template pTemplate="selectedItem">
+                  <div class="flex align-items-center gap-2" *ngIf="selectedCountry" style="display: flex">
+                      <img src="assets/img/flags/{{ selectedCountry.code.toLowerCase() }}.svg" class="flag-icon" style="width: 30px;" />
+                      <div>{{ selectedCountry.name }}</div>
+                  </div>
+              </ng-template>
+              <ng-template let-country pTemplate="item">
+                  <div class="d-flex align-items-center gap-2">
+                      <img src="assets/img/flags/{{ country.code.toLowerCase() }}.svg" class="flag-icon" style="width: 30px;" />
+                      <small>{{ country.name }}</small>
+                  </div>
+              </ng-template>
+          </p-dropdown>
+      </div>
+      </div>
+
+
+
+    </div>
+    <div class="grad"></div>
+    <nav class="navbar navbar-expand-lg" style="padding: 0;">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="115px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+          <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; margin-left: 20px; font-size: 14px!important;">
+            @for (item of menu; track item; let i = $index) {
+
+              <li class="nav-item has-submenu" [routerLink]="item.url"
+              [ngClass]="{ 'dropdown': item.submenu}"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >
+              <a class="nav-link" [ngClass]="{ 'dropdown-toggle': item.submenu }" [routerLink]="item.url"
+                (click)="setActiveMenuItem(i)" role="button" data-bs-toggle="dropdown"
+                [attr.aria-expanded]="i === activeMenuItem ? 'true' : 'false'" style="line-height: 4;">
+                {{item.name | translate}}
+              </a>
+              @if (item.submenu) {
+                <ul class="dropdown-menu">
+                  @for (subItem of item.submenu; track subItem) {
+                    <li class="nav-item" [routerLink]="subItem.url">
+                      <a class="dropdown-item" [routerLink]="subItem.url">
+                        <div class="span">
+                          <img [src]="subItem.icon" alt="">
+                        </div>
+                        {{subItem.name | translate}}
+                      </a>
+                    </li>
+                  }
+                </ul>
+              }
+            </li>
+
+            }
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn bt2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">
+                <img src="assets/svg/Icon-pesquisa.svg" alt="">
+            </button>
+        </form>
+        <!-- <a href="https://ssj.minfin.gov.ao/" style="margin-top: -85px;" target="_blank"><button  class="btn bt1" type="button" href="https://ssj.minfin.gov.ao/portal/" target="_blank" > <img src="assets/img/file-shield-01.svg" alt=""> Solicitar</button>
+        </a> -->
+        </div>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" style="width: 100%!important;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title fs-5" id="exampleModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="36"
+                height="37" viewBox="0 0 36 37" fill="none">
+                <path
+                  d="M31.5 32L24.975 25.475M28.5 17C28.5 23.6274 23.1274 29 16.5 29C9.87258 29 4.5 23.6274 4.5 17C4.5 10.3726 9.87258 5 16.5 5C23.1274 5 28.5 10.3726 28.5 17Z"
+                  stroke="#101828" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg> Buscar</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- <app-pesquisa-global></app-pesquisa-global> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+      <div class="SegundoHeader d-block d-xl-none">
+      <!-- <app-header-mobile></app-header-mobile> -->
+      </div>
+
+
+  </div>

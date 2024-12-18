@@ -1,0 +1,196 @@
+{
+  "languages": {
+    "en": "English",
+    "pt": "Portuguese",
+    "fr": "French",
+    "select": "Select Language"
+  },
+  "mouse": "Learn more",
+  "watch": "See more",
+  "search": "Search",
+  "notFound": "No content found",
+  "total":"Total",
+  "records":"records",
+  "header": {
+    "inicio": "Home",
+    "sobre": {
+      "titulo": "About",
+      "sobreNos": "About us",
+      "orgaos": "Organs",
+      "atribuicoes": "Attributions"
+    },
+    "legislacao": {
+      "titulo": "Legislation",
+      "se": "Business Sector",
+      "sp": "Public Sector"
+    },
+    "imprensa": {
+      "titulo": "Press Room",
+      "noticias": "News",
+      "galeria": "Gallery",
+      "publicacoes": "Publications",
+      "comunicados": "Statements",
+      "faq": "Frequently Asked Questions"
+    },
+    "contacto": "Contact"
+  },
+  "home": {
+    "banner": {
+      "icon": "Welcome to CNNCA"
+    },
+    "normativo": {
+      "soon": "Coming Soon",
+      "available": "Available",
+      "viewDoc": "View Document"
+    },
+    "sobreHome": {
+      "titulo": "What is the"
+    },
+    "missaoClara": {
+      "titulo": "CNNCA Has a",
+      "missao": "clear mission",
+      "btn": "Learn more about the"
+    },
+    "noticias": {
+      "span": "News",
+      "titulo": "Recent News About CNNCA",
+      "btnVer": "View all news"
+    },
+    "accoes": {
+      "titulo": "CNNCA's Strategic Actions for",
+      "span": "Accounting Transformation",
+      "angola": "in Angola",
+      "subtitulo": "we contribute to the country's economic development through the continuous improvement of accounting practices",
+      "btnVer": "See also"
+    },
+    "linksUteis": "Institutional links"
+  },
+  "footer": {
+    "localizacao": " Minfin building, Xº floor,Luanda – Angola",
+    "sobre-o-cnnca": "About the CNNCA",
+    "press": "Press Room",
+    "central": "Central",
+    "direitos": "All rights reserved."
+  },
+  "sobrePage": {
+    "bannerSobre": {
+      "icon": "About",
+      "titulo": "About the",
+      "subtitulo": "Learn a little about who we are, our mission, activities, and goals."
+    },
+    "acerca": {
+      "OqueE": "What is the",
+      "objectivo": "Objective"
+    },
+    "pilares": {
+      "titulo": "The main pillars of CNNCA",
+      "missao": "Mission",
+      "visao": "Vision"
+    },
+    "principios": {
+      "titulo_inicio": "The",
+      "titulo_gradient": "principles",
+      "titulo_others": "that guide us",
+      "corpo": "In carrying out its duties, the CNNCA and its members must base their actions on the following principles:"
+    },
+    "atribuicoes": {
+      "titulo_inicio": "Attributions",
+      "titulo": "of the National Council of Accounting Standardization of Angola",
+      "subtitulo": "CNNCA plays a key role in accounting standardization in Angola",
+      "btnVer": "View all attributions"
+    },
+    "estruturaOrganizacional": {
+      "bannerDescricao": "Meet each of CNNCA's organs",
+      "titulo_inicio": "Organizational",
+      "span": "Structure",
+      "subtitulo": "CNNCA is composed of the following members:",
+      "coordenador": "Coordinator",
+      "coordenador_adjuntos": "2 Deputy Coordinators",
+      "coordenador_adjuntos_tab": "Deputy Coordinators",
+      "secretario_executivo": "Executive Secretary",
+      "conselho_geral": "General Council",
+      "comissoes_tecnicas": "Technical Committees (for Business and Public Sector)"
+    },
+    "estatuto": {
+      "titulo": "Statute",
+      "organico": "Organic",
+      "decreto": "Decree"
+    }
+  },
+  "atribuicoes": {
+    "span": "Attributions",
+    "titulo_inicio": "of CNNCA",
+    "bannerDescricao": "Learn about each of CNNCA's responsibilities",
+    "descricao": "CNNCA has the following attributions"
+  },
+  "legislacao": {
+    "icon": "Legislation",
+    "titulo_inicio": "Business",
+    "span": "Sector",
+    "span2": "Public",
+    "bannerDescricao": "Legislative Documents for the Business Sector",
+    "bannerDescricao2": "Legislative Documents for the Public Sector",
+    "todos": "All",
+    "decretos": "Executive Decrees",
+    "decretos_pr": "Presidential Decrees",
+    "leis": "Laws"
+  },
+  "imprensa": {
+    "icon": "Press Room",
+    "noticias": {
+      "titulo_inicio": "about CNNCA",
+      "span": "News",
+      "bannerDescricao": "Stay updated on the latest news from CNNCA",
+      "new": "New",
+      "read": "Read the new",
+      "search" :"Search"
+    },
+    "galeria": {
+      "titulo_inicio": "of events",
+      "span": "Gallery",
+      "bannerDescricao": "Galleries of events organized by CNNCA.",
+      "search" :"Search",
+      "back": "Back to Gallery"
+    },
+    "publicacoes": {
+      "span": "Publications",
+      "bannerDescricao": "Stay updated on the latest news from CNNCA.",
+      "todos": "All",
+      "normativos": "Regulations",
+      "parecer": "Opinions"
+    },
+    "comunicados": {
+      "span": "Statements",
+      "bannerDescricao": "Stay updated on the latest news from CNNCA."
+    },
+    "perguntas": {
+      "span": "Questions",
+      "titulo_intro": "Frequently",
+      "bannerDescricao": "Frequently asked questions about CNNCA.",
+      "titulo": "Frequently Asked Questions",
+      "subtitulo": "Everything you need to know about the National Council of Accounting Standardization of Angola"
+    }
+  },
+  "contactos": {
+    "titulo": "Contact",
+    "subtitulo": "Talk",
+    "span": "with us",
+    "txt": "Get in touch with CNNCA for more information about our activities, accounting standards, or any other related subject.",
+    "btn": "Learn more",
+    "form": {
+      "titulo": "Leave your message",
+      "subtitulo": "Our opening hours are Monday to Friday ",
+      "to": "to",
+      "nome": "First and last name",
+      "email": "Email",
+      "phone": "Phone",
+      "assunto": "Subject",
+      "mensagem": "Message",
+      "send": "Send"
+    },
+    "localizacao": {
+      "titulo": "Location",
+      "pin": "Minfin building, Xº floor,Luanda – Angola"
+    }
+  }
+}
