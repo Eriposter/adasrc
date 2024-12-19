@@ -1,36 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+// @import "primeicons/primeicons.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
 :root{
-  //System colors
-  --white: #FCFCFD;
-  --Gray-50: #F9FAFB
-  --Light-Grey:#D0D5DD;
-  --Dark-Gray: #475467;
-  --Bege: ##FEF6EE;
-  --light-bege:#FEFAF5;
-  --Dark-bege: #FDEAD7;
-  --medium-bege: ##FFFCF8;
-  --Light-blue: #1D2939;
-  --Dark-blue: #101828;
-  --Darkest-blue : #0C111D
-  --orange: #EF6820 ;
-  --Blue-gradient:linear-gradient(107deg, rgba(16, 24, 40, 0.86) 0%, rgba(16, 24, 40, 0.99) 34%, #101828 100%);
+    //System colors
+    --white: #FCFCFD;
+    --Gray-50: #F9FAFB
+    --Light-Grey:#D0D5DD;
+    --Dark-Gray: #475467;
+    --Bege: ##FEF6EE;
+    --light-bege:#FEFAF5;
+    --Dark-bege: #FDEAD7;
+    --medium-bege: ##FFFCF8;
+    --Light-blue: #1D2939;
+    --Dark-blue: #101828;
+    --Darkest-blue : #0C111D
+    --orange: #EF6820 ;
+    --Blue-gradient:linear-gradient(107deg, rgba(16, 24, 40, 0.86) 0%, rgba(16, 24, 40, 0.99) 34%, #101828 100%);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  vertical-align: top;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
 
 body{
-background: var(--Gray-50);
+  background: var(--Gray-50);
 }
 
 body p {
-font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 
@@ -40,22 +43,22 @@ h3,
 h4,
 h5,
 h6 {
-font-family: "Montserrat" !important;
-font-weight: 800!important;
+  font-family: "Montserrat" !important;
+  font-weight: 800!important;
 }
 
 body a {
-font-family: "Montserrat" !important;
-font-weight: 800!important;
+  font-family: "Montserrat" !important;
+  font-weight: 800!important;
 }
 
 //Classes de cores
 .gradient-text {
-background: linear-gradient(90deg, #FF6F07 0.01%, #F7CB09 99.99%);
--webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
--webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #FF6F07 0.01%, #F7CB09 99.99%);
+  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+  -webkit-text-fill-color: transparent;
 }
-.blue-gradient{background: var(--Blue-gradient)}
+.blue-gradient{background: var(--Blue-gradient);}
 
 .Darkest-blue {color: var(--Darkest-blue);}
 .Light-Grey{color: var(--Light-Grey)}
@@ -68,34 +71,34 @@ background: linear-gradient(90deg, #FF6F07 0.01%, #F7CB09 99.99%);
 .white-text{color: #fff;}
 
 .dropdown-toggle {
-display: flex;
-align-items: center;
-gap: 8px;
-background: none;
-border: none;
-color: #333;
-cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
 }
 
 .dropdown-menu {
-margin-top: 10px;
-left: -50px; /* Ajuste o valor conforme necessário para alinhar o menu */
+  margin-top: 10px;
+  left: -50px; /* Ajuste o valor conforme necessário para alinhar o menu */
 }
 // Texto de Erro sem conteúdo
 .notFound{
-width: 100%!important;
-text-align: center;
-justify-content: center;
-align-items: center;
+  width: 100%!important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .p-carousel-indicators{
-display: none!important;
+  display: none!important;
 }
 
 .p-ripple{
 border: none;
-background-color: transparent;
+  background-color: transparent;
 }
 .p-paginator-page{
 background-color: #ff6f07;
@@ -107,25 +110,42 @@ display: flex;
 }
 
 @media(max-width: 763px){
-h1{
-  line-height: 40px!important;
-  font-size: 36px!important;
-}
-.p-dropdown-clear-icon{
-  top: 5px!important;
-}
+  h1{
+    line-height: 40px!important;
+    font-size: 36px!important;
+  }
+  .p-dropdown-clear-icon{
+    top: 3px!important;
+  }
 }
 
 .p-icon-wrapper{
-margin-left: 25px;
+  margin-left: 25px;
 }
 
 .p-dropdown{
-border: 0px solid;
+  border: 0px solid;
 }
 
 .p-dropdown-clear-icon{
-position: relative;
-left: 0;
-top: 23px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.p-dropdown-items{
+  width: 150px;
+  padding-left: 10px;
+}
+
+.p-dropdown-item{
+  margin-top: 10px;
+  height: 30px;
+}
+.p-dropdown{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding-left: 10px;
 }
