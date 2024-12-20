@@ -1,0 +1,37 @@
+
+/*** Service ***/
+.service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.service-icon {
+  position: relative;
+  margin: -50px 0 25px 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: #FFFFFF;
+  border-radius: 100px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  transition: .5s;
+}
+
+.service-item:hover .service-icon {
+  background-color: rgba(191, 24, 24, 1)!important;
+  color: #fff!important;
+}
+
+
+.bgcol{
+  background-color: rgba(191, 24, 24, 1)!important;
+  color: #fff;
+}
+
+.color{
+  color: rgba(191, 24, 24, 1)!important;
+  font-weight: 500 !important;
+  text-decoration: none;
+}

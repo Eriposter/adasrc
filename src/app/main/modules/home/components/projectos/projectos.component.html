@@ -1,0 +1,60 @@
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h6 class="color">Our Projects</h6>
+      <h1 class="mb-4">Visit Our Latest Solar And Renewable Energy Projects</h1>
+    </div>
+    <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="col-12 text-center">
+        <ul class="list-inline mb-5" id="portfolio-filters">
+          <li
+            class="mx-2"
+            [ngClass]="{'active': activeCategory === 'all'}"
+            (click)="setCategory('all')">
+            All
+          </li>
+          <li
+            class="mx-2"
+            [ngClass]="{'active': activeCategory === 'solar'}"
+            (click)="setCategory('solar')">
+            Solar Panels
+          </li>
+          <li
+            class="mx-2"
+            [ngClass]="{'active': activeCategory === 'wind'}"
+            (click)="setCategory('wind')">
+            Wind Turbines
+          </li>
+          <li
+            class="mx-2"
+            [ngClass]="{'active': activeCategory === 'hydro'}"
+            (click)="setCategory('hydro')">
+            Hydropower Plants
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s">
+      <div
+        class="col-lg-4 col-md-6 portfolio-item"
+        *ngFor="let project of projects"
+        [hidden]="activeCategory !== 'all' && activeCategory !== project.category">
+        <div class="portfolio-img rounded overflow-hidden">
+          <img class="img-fluid" [src]="project.image" [alt]="project.title">
+          <div class="portfolio-btn">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" [href]="project.image" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="pt-3">
+          <p class="color mb-0">{{ project.categoryLabel }}</p>
+          <hr class="color w-25 my-2">
+          <h5 class="lh-base">{{ project.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Projects End -->

@@ -1,48 +1,37 @@
-<!-- Carousel Start -->
-<div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-  <div class="owl-carousel header-carousel position-relative">
-      <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
-          <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-          <div class="owl-carousel-inner">
-              <div class="container">
-                  <div class="row justify-content-start">
-                      <div class="col-10 col-lg-8">
-                          <h1 class="display-2 text-white animated slideInDown">Pioneers Of Solar And Renewable Energy</h1>
-                          <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                          <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a>
-                      </div>
-                  </div>
-              </div>
+<div class="banner bg-light" style="background-image: url(assets/img/fundoBanner.png);">
+  <div class="carousel">
+    <div class="carousel__nav">
+      <span id="moveLeft" class="carousel__arrow" (click)="moveLeft()" (mouseenter)="stopAutoplay()" (touchstart)="stopAutoplay()">
+        <svg width="16" height="101" viewBox="0 0 16 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.7071 0.292892C8.31658 -0.0976334 7.68341 -0.0976333 7.29289 0.292892L0.928928 6.65685C0.538404 7.04738 0.538404 7.68054 0.928928 8.07107C1.31945 8.46159 1.95262 8.46159 2.34314 8.07107L8 2.41422L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.7071 0.292892ZM9 101L9 1L7 1L7 101L9 101Z" fill="#1D2939"/>
+          </svg>
+      </span>
+      <span id="moveRight" class="carousel__arrow" (click)="moveRight()" (mouseenter)="stopAutoplay()" (touchstart)="stopAutoplay()">
+        <svg width="16" height="101" viewBox="0 0 16 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.29289 100.707C7.68342 101.098 8.31658 101.098 8.70711 100.707L15.0711 94.3431C15.4616 93.9526 15.4616 93.3195 15.0711 92.9289C14.6805 92.5384 14.0474 92.5384 13.6569 92.9289L8 98.5858L2.34315 92.9289C1.95262 92.5384 1.31946 92.5384 0.928933 92.9289C0.538409 93.3195 0.538409 93.9526 0.928933 94.3431L7.29289 100.707ZM7 1.19249e-08L7 100L9 100L9 -1.19249e-08L7 1.19249e-08Z" fill="#EF6820"/>
+          </svg>
+
+      </span>
+    </div>
+    <div class="carousel-item" *ngFor="let item of banner; let i = index" [ngClass]="{'active': i === currentIndex}">
+      <div class="carousel-item__image">
+        <div class="div-shape" >
+          <div class="div-shape2">
+            <img [src]="item.data.url || 'assets/footer/casino.png'" alt="">
           </div>
+        </div>
       </div>
-      <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">
-          <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-          <div class="owl-carousel-inner">
-              <div class="container">
-                  <div class="row justify-content-start">
-                      <div class="col-10 col-lg-8">
-                          <h1 class="display-2 text-white animated slideInDown">Pioneers Of Solar And Renewable Energy</h1>
-                          <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                          <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle"> <img src="assets/svg/icon.svg" /> {{ item.data.subtitle| mapLang }} </h2>
+          <h1 class="carousel-item__title">{{ item.data.title | mapLang}} <span class="gradient-text">{{ item.data.title2| mapLang }}</span> </h1>
+          <p class="carousel-item__description" [innerHTML]="item?.data?.descricao| mapLang"></p>
+          <!-- <a href="#" class="carousel-item__btn">{{ item.buttonText }}</a> -->
+        </div>
       </div>
-      <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
-          <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-          <div class="owl-carousel-inner">
-              <div class="container">
-                  <div class="row justify-content-start">
-                      <div class="col-10 col-lg-8">
-                          <h1 class="display-2 text-white animated slideInDown">Pioneers Of Solar And Renewable Energy</h1>
-                          <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                          <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+    </div>
   </div>
+
 </div>
-<!-- Carousel End -->
+
+

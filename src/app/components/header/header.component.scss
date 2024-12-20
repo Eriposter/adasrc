@@ -2,7 +2,13 @@
 /*** Navbar ***/
 
 .navbar{
-  border-bottom: 2px solid #BF1818;
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
 }
 .navbar.sticky-top {
   top: -100px;
