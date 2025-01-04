@@ -27,14 +27,6 @@ export class BannerComponent {
     private bannerService : BannerService
   ){}
 
-  items: CarouselItem[] = [
-    { subtitle: 'Bem vindo ao CNNCA', url:'assets/footer/casino.png', title: 'Instituto de Supervisão de', title2: 'Jogos', description: 'Conheça o instituto responsável por supervisionar, regulamentar e fiscalizar toda actividade de jogos a nivel nacional', buttonText: 'Explore the tour' },
-    { subtitle: 'Bem vindo ao CNNCA', url:'assets/img/comunicado.png', title: 'Instituto de Supervisão de', title2: 'Jogos', description: 'Jogos', buttonText: 'Explore the tour' },
-    { subtitle: 'Bem vindo ao CNNCA', url:'assets/img/estatistica.png', title: 'Instituto de Supervisão de', title2: 'Jogos', description: 'Jogos', buttonText: 'Explore the tour' },
-    { subtitle: 'Bem vindo ao CNNCA', url:'assets/footer/fundo.png', title: 'Instituto de Supervisão de', title2: 'Jogos', description: 'Jogos', buttonText: 'Explore the tour' },
-
-  ];
-
   ngOnInit(): void {
     // Iniciar o autoplay quando o componente for inicializado
     this.startAutoplay();

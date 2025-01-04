@@ -37,69 +37,99 @@ export class HeaderComponent implements OnInit {
     },
     {
       name: 'header.sobre.titulo',
-      submenu: [
-        {
-          name: 'header.sobre.sobreNos',
-          url: 'sobre',
-          icon: 'assets/header/menu icon.png',
-        },
-        {
-
-          name: 'header.sobre.orgaos',
-          url: 'sobre/estrutura',
-          icon: 'assets/header/orgao-icon.png',
-        },
-        {
-          name: 'header.sobre.atribuicoes',
-          url: 'sobre/atribuicoes',
-          icon: 'assets/header/atribuicoes-icon.png',
-        }
-      ],
+      url: 'sobre',
     },
+    // {
+    //   name: 'header.sobre.titulo',
+    //   submenu: [
+    //     {
+    //       name: 'header.sobre.sobreNos',
+    //       url: 'sobre',
+    //       icon: 'assets/header/menu icon.png',
+    //     },
+    //     {
+
+    //       name: 'header.sobre.orgaos',
+    //       url: 'sobre/estrutura',
+    //       icon: 'assets/header/orgao-icon.png',
+    //     },
+    //     {
+    //       name: 'header.sobre.atribuicoes',
+    //       url: 'sobre/atribuicoes',
+    //       icon: 'assets/header/atribuicoes-icon.png',
+    //     }
+    //   ],
+    // },
     {
-      name: 'header.legislacao.titulo',
+      name: 'header.servicos.titulo',
+      url: 'servicos',
       submenu: [
         {
-          name: 'header.legislacao.se',
+          name: 'header.servicos.sr',
           url: 'legislacao/sector-empresarial',
           icon: 'assets/header/sec-empresarial-icon.png',
         },
         {
-          name: 'header.legislacao.sp',
-          url: 'legislacao/sector-publico',
-          icon: 'assets/header/sec-publico-icon.png',
+          name: 'header.servicos.gm',
+          url: 'legislacao/sector-empresarial',
+          icon: 'assets/header/sec-empresarial-icon.png',
+        },
+        {
+          name: 'header.servicos.er',
+          url: 'legislacao/sector-empresarial',
+          icon: 'assets/header/sec-empresarial-icon.png',
+        },
+        {
+          name: 'header.servicos.ps',
+          url: 'legislacao/sector-empresarial',
+          icon: 'assets/header/sec-empresarial-icon.png',
+        },
+        {
+          name: 'header.servicos.sv',
+          url: 'legislacao/sector-empresarial',
+          icon: 'assets/header/sec-empresarial-icon.png',
+        },
+        {
+          name: 'header.servicos.sh',
+          url: 'legislacao/sector-empresarial',
+          icon: 'assets/header/sec-empresarial-icon.png',
         }
+
       ],
     },
+    // {
+    //   name: 'header.imprensa.titulo',
+    //   submenu: [
+    //     {
+    //       name: 'header.imprensa.noticias',
+    //       url: 'sala-de-imprensa/noticias',
+    //       icon: 'assets/header/news-icon.png',
+    //     },
+    //     {
+    //       name: 'header.imprensa.galeria',
+    //       url: 'sala-de-imprensa/galerias',
+    //       icon: 'assets/header/galeria-icon.png',
+    //     },
+    //     {
+    //       name: 'header.imprensa.publicacoes',
+    //       url: 'sala-de-imprensa/publicacoes',
+    //       icon: 'assets/header/pub-icon.png',
+    //     },
+    //     {
+    //       name: 'header.imprensa.comunicados',
+    //       url: 'sala-de-imprensa/comunicados',
+    //       icon: 'assets/header/comunicados-icon.png',
+    //     },
+    //     {
+    //       name: 'header.imprensa.faq',
+    //       url: 'sala-de-imprensa/perguntas-frequentes',
+    //       icon: 'assets/header/faq-icon.png',
+    //     }
+    //   ],
+    // },
     {
-      name: 'header.imprensa.titulo',
-      submenu: [
-        {
-          name: 'header.imprensa.noticias',
-          url: 'sala-de-imprensa/noticias',
-          icon: 'assets/header/news-icon.png',
-        },
-        {
-          name: 'header.imprensa.galeria',
-          url: 'sala-de-imprensa/galerias',
-          icon: 'assets/header/galeria-icon.png',
-        },
-        {
-          name: 'header.imprensa.publicacoes',
-          url: 'sala-de-imprensa/publicacoes',
-          icon: 'assets/header/pub-icon.png',
-        },
-        {
-          name: 'header.imprensa.comunicados',
-          url: 'sala-de-imprensa/comunicados',
-          icon: 'assets/header/comunicados-icon.png',
-        },
-        {
-          name: 'header.imprensa.faq',
-          url: 'sala-de-imprensa/perguntas-frequentes',
-          icon: 'assets/header/faq-icon.png',
-        }
-      ],
+      name: 'header.projectos',
+      url: 'projectos',
     },
     {
       name: 'header.contacto',

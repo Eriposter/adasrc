@@ -1,0 +1,174 @@
+.sobre {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+}
+
+.sect {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.linha-horizontal {
+  border-top: 5px solid #D92D20;
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 1;
+}
+
+.titulo-noticias {
+  display: inline-block;
+  color: var(--Blue-light-600, #0086C9);
+  font-family: "Montserrat";
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+h3 {
+  color: #101828;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+span {
+  color: var(--Blue-light-600);
+}
+
+.acesso {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-left: 3px;
+}
+
+.btn {
+  border: 2px solid var(--gray-800);
+  border-radius: 0px;
+  display: flex;
+  width: 300px;
+  height: 53px;
+  padding: 14.5px 159px 14.5px 16px;
+  align-items: center;
+}
+
+
+
+.sb-p {
+  color: var(--gray-500, #667085);
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+.lnr {
+  width: 50px !important;
+  display: inline-block !important;
+  margin-right: 10px;
+  border: 2px solid #D92D20;
+  opacity: 1;
+}
+
+.btn:hover {
+  border-color: #0086C9;
+}
+
+.btn:hover img {
+  animation: slideArrow 0.5s ease-in-out forwards;
+}
+
+@keyframes slideArrow {
+  to {
+    transform: translateX(130PX);
+  }
+}
+
+
+.btn-p-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.btn-text {
+  color: var(--gray-600, #475467);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 24px */
+}
+.btn-p-container:hover .btn-text{
+  color: black;
+}
+
+.btn-icon-container {
+  margin-left: 6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-icon-container img {
+
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para a mudança de posição */
+}
+
+.btn-icon-container img:nth-child(2) {
+  transform: translateX(-100%);
+}
+
+.btn:hover .btn-icon-container img:nth-child(1) {
+  transform: translateX(100%); /* Quando o botão é hover, a primeira imagem (arrow-narrow-right.svg) desliza para a direita */
+}
+
+.btn:hover .btn-icon-container img:nth-child(2) {
+  transform: translateX(0); /* Quando o botão é hover, a segunda imagem (arrow-narrow-red.svg) desliza para a esquerda, ficando lado a lado com a primeira imagem */
+}
+.btn-icon-container img:nth-child(2) {
+  opacity: 0; /* Inicialmente, a segunda imagem (arrow-narrow-red.svg) está invisível */
+}
+
+.btn:hover .btn-icon-container img:nth-child(1) {
+  opacity: 0; /* Quando o botão é hover, a primeira imagem (arrow-narrow-right.svg) fica invisível */
+}
+
+.btn:hover .btn-icon-container img:nth-child(2) {
+  opacity: 1; /* Quando o botão é hover, a segunda imagem (arrow-narrow-red.svg) fica visível */
+}
+
+.btn:hover .btn-icon-container img {
+  fill: #D92D20; /* Cor vermelha ao passar o mouse */
+  transition: fill 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+
+//2nd txt
+.premissa{
+  display: flex;
+  flex-direction: row;
+
+  img{
+    margin-right: 24px;
+  }
+
+  p{
+    font-size: 18px;
+    color: #475467;
+    font-weight: 600!important;
+  }
+
+}

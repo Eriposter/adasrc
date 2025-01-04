@@ -1,0 +1,24 @@
+<!-- Service Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h6 class="color">Nossos Serviços</h6>
+    </div>
+    <div class="row g-4" >
+      <div *ngFor="let project of projecto let i = index" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="800">
+        <div class="service-item rounded overflow-hidden">
+          <img class="img-fluid imagem" [src]="project.data.imagem[0]" [alt]="project.data.titulo" alt="">
+          <div class="position-relative p-4 pt-0">
+            <div class="service-icon">
+              <fa-icon [icon]="faSolarPanel" class="fa fa-3x color"></fa-icon>
+            </div>
+            <h4 class="mb-3">{{ project.data.titulo | mapLang }}</h4>
+            <p>{{ project.data.sumario | mapLang }}</p>
+            <a class="small fw-medium color" [href]="'servicos/' + (project.data.slug | mapLang)" >Saiba mais <fa-icon [icon]="faArrowRight" class="fa"></fa-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Service End -->

@@ -2,8 +2,8 @@
 <div class="container-xxl py-5">
   <div class="container">
     <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-      <h6 class="color">Our Projects</h6>
-      <h1 class="mb-4">Visit Our Latest Solar And Renewable Energy Projects</h1>
+      <h6 class="color">Projectos</h6>
+      <h1 class="mb-4">Consulte os trabalhos feitos por nós</h1>
     </div>
     <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
       <div class="col-12 text-center">
@@ -12,25 +12,25 @@
             class="mx-2"
             [ngClass]="{'active': activeCategory === 'all'}"
             (click)="setCategory('all')">
-            All
+            Todos
           </li>
           <li
             class="mx-2"
-            [ngClass]="{'active': activeCategory === 'solar'}"
-            (click)="setCategory('solar')">
-            Solar Panels
+            [ngClass]="{'active': activeCategory === 'horizontal'}"
+            (click)="setCategory('horizontal')">
+            Sinalização Horizontal
           </li>
           <li
             class="mx-2"
-            [ngClass]="{'active': activeCategory === 'wind'}"
-            (click)="setCategory('wind')">
-            Wind Turbines
+            [ngClass]="{'active': activeCategory === 'vertical'}"
+            (click)="setCategory('vertical')">
+            Sinalização Vertical
           </li>
           <li
             class="mx-2"
-            [ngClass]="{'active': activeCategory === 'hydro'}"
-            (click)="setCategory('hydro')">
-            Hydropower Plants
+            [ngClass]="{'active': activeCategory === 'portico'}"
+            (click)="setCategory('portico')">
+            Pórtico de Sinalização
           </li>
         </ul>
       </div>
@@ -39,19 +39,19 @@
     <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s">
       <div
         class="col-lg-4 col-md-6 portfolio-item"
-        *ngFor="let project of projects"
-        [hidden]="activeCategory !== 'all' && activeCategory !== project.category">
+        *ngFor="let project of projecto let i = index"
+        [hidden]="activeCategory !== 'all' && activeCategory !== project.data.categoria | mapLang">
         <div class="portfolio-img rounded overflow-hidden">
-          <img class="img-fluid" [src]="project.image" [alt]="project.title">
+          <img class="img-fluid" style="width: 100%; height: 270px; object-fit: cover;" [src]="project.data.ficheiros[0]" [alt]="project.data.titulo">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" [href]="project.image" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" [href]="project.data.ficheiros[0]" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
           </div>
         </div>
         <div class="pt-3">
-          <p class="color mb-0">{{ project.categoryLabel }}</p>
+          <p class="color mb-0">{{ project.data.categoria | mapLang }}</p>
           <hr class="color w-25 my-2">
-          <h5 class="lh-base">{{ project.title }}</h5>
+          <h5 class="lh-base">{{ project.data.titulo | mapLang }}</h5>
         </div>
       </div>
     </div>

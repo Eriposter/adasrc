@@ -21,7 +21,7 @@
 <ng-template #submenuTemplate>
   <a
     class="nav-link dropdown-toggle"
-    href="#"
+    [routerLink]="item.url"
     role="button"
     data-bs-toggle="dropdown"
     [attr.aria-expanded]="i === activeMenuItem ? 'true' : 'false'"

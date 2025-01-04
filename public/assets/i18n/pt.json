@@ -32,15 +32,25 @@
       "comunicados": "Comunicados",
       "faq": "Perguntas Frequentes"
     },
-    "contacto": "Contacto"
+    "servicos": {
+      "titulo": "Serviços",
+      "sr": "Segurança Rodoviária",
+      "gm": "Guardas Metálicas",
+      "er": "Equipamentos Rodoviários",
+      "ps": "Pórticos de Sinalização",
+      "sv": "Sinalização Vertical",
+      "sh": "Sinalização Horizontal"
+    },
+    "contacto": "Contacto",
+    "projectos": "Projectos"
   },
   "home": {
     "banner": {
       "icon": "Bem Vindo ao CNNCA"
     },
     "footer": {
-      "localizacao": "Edifício Minfin, Xº Andar,Luanda – Angola",
-      "sobre-o-cnnca": "Sobre o CNNCA",
+      "localizacao": "Kilamba Bloco F. Apt nº 5 - 5 ºAndar Município de Belas Luanda",
+      "sobre-o-cnnca": "ADASRC",
       "press": "Sala de Imprensa",
       "central": "Central"
     },
@@ -72,11 +82,12 @@
     "linksUteis": "Links institucionais"
   },
   "footer": {
-    "localizacao": " Edifício Minfin, Xº Andar,Luanda – Angola",
-    "sobre-o-cnnca": "Sobre o CNNCA",
+    "localizacao": "Kilamba Bloco F. Apt nº 5 - 5 ºAndar Município de Belas Luanda",
+    "sobre-o-cnnca": "ADASRC",
     "press": "Sala de Imprensa",
     "central": "Central",
-    "direitos": "Todos os direitos reservados."
+    "direitos": "Todos os direitos reservados.",
+    "contacto": "Entre em Contacto"
   },
   "sobrePage": {
     "bannerSobre": {

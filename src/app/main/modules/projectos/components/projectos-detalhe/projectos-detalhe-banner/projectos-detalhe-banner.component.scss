@@ -1,0 +1,30 @@
+/*** Hero Header ***/
+.hero-header {
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-end;
+  background-color: rgba(191, 24, 24, .2)!important;
+}
+.color{
+  color: rgba(191, 24, 24, 1)!important;
+}
+.bgcolor{
+  background-color: rgba(191, 24, 24, 1)!important;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+
+  span {
+    color:  rgba(191, 24, 24, 1)!important;
+  }
+}
+
+.top{
+  margin-top: 50px;
+}
+
