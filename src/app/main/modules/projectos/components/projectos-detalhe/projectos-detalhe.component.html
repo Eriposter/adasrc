@@ -2,29 +2,26 @@
   [titulo]="servico?.data?.titulo | mapLang"
   [imagem]="servico?.data?.ficheiros">
 </app-projectos-detalhe-banner>
+<div *ngIf="servico">
+  <div class="container py-5">
 
-<!-- Service Details Section -->
-<section id="service-details" class="service-details section">
+    <!-- <div class="row">
 
-  <div class="container">
+      <div class="col-12 col-md-6 color py-5">
+        <h2 class="">{{ servico.data.titulo | mapLang}}</h2>
+        <h4><span>{{servico.data.descricao | mapLang}}</span></h4>
 
-    <div class="row gy-5">
-
-      <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-        <img [src]="servico?.data?.ficheiros" [alt]="servico?.data?.titulo" class="img-fluid services-img">
-        <h3>{{servico?.data?.titulo | mapLang}}</h3> <br>
-        <p style="text-align: justify;">
-          {{servico?.data?.descricao | mapLang}}
-        </p>
-        <ul>
-          <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-          <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-          <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-        </ul>
       </div>
 
-    </div>
+    </div> -->
+
+
+      <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+        <a *ngFor=" let imagem of servico.data.ficheiros" data-lg-size="480-475-480, 800-791-800, 1406-1390" class="gallery-item"
+        [attr.data-src]="imagem">
+        <img class="img-responsive im" [src]="imagem" />
+        </a>
+      </lightgallery>
 
   </div>
-
-</section><!-- /Service Details Section -->
+</div>

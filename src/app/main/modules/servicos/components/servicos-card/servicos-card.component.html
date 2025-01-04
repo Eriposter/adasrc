@@ -7,7 +7,7 @@
     <div class="row g-4" >
       <div *ngFor="let project of projecto let i = index" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="800">
         <div class="service-item rounded overflow-hidden">
-          <img class="img-fluid imagem" [src]="project.data.imagem[0]" [alt]="project.data.titulo" alt="">
+          <img class="img-fluid imagem" [src]="project.data.imagem[0]" [alt]="project.data.titulo | mapLang" alt="">
           <div class="position-relative p-4 pt-0">
             <div class="service-icon">
               <fa-icon [icon]="faSolarPanel" class="fa fa-3x color"></fa-icon>

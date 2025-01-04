@@ -6,34 +6,12 @@
           <!-- <h1 class="mb-4" data-aos="fade-up" data-aos-duration="2300">Explore os nossos casos de estudos mais recentes</h1> -->
       </div>
       <div class="row g-4">
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s" data-aos="fade-left" data-aos-duration="2500">
+          <div *ngFor="let project of projecto let i = index" class="col-lg-4 wow fadeIn" data-wow-delay="0.3s" data-aos="fade-left" data-aos-duration="2500">
               <div class="case-item position-relative overflow-hidden rounded mb-2">
-                  <img class="img-fluid" src="assets/img/sobre-nos.jpg" style="height: 500px; object-fit: cover;" alt="">
-                  <a class="case-overlay text-decoration-none" href="">
-                      <small>Sinalização Horizontal</small>
-                      <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                      </h5>
-                      <span class="btn btn-square bgcol"><fa-icon [icon]="faArrowRight"></fa-icon></span>
-                  </a>
-              </div>
-          </div>
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s" data-aos="fade-up" data-aos-duration="2500">
-              <div class="case-item position-relative overflow-hidden rounded mb-2">
-                  <img class="img-fluid" src="assets/img/servicos.jpg" style="height: 500px; object-fit: cover;" alt="">
-                  <a class="case-overlay text-decoration-none" href="">
-                      <small>Marcação de Vias</small>
-                      <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                      </h5>
-                      <span class="btn btn-square bgcol"><fa-icon [icon]="faArrowRight"></fa-icon></span>
-                  </a>
-              </div>
-          </div>
-          <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s" data-aos="fade-right" data-aos-duration="2500">
-              <div class="case-item position-relative overflow-hidden rounded mb-2">
-                  <img class="img-fluid" src="assets/img/sobre.jpg" style="height: 500px; width: 100%; object-fit: cover;" alt="">
-                  <a class="case-overlay text-decoration-none" href="">
-                      <small>Predictive Analysis</small>
-                      <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
+                  <img class="img-fluid"  [src]="project.data.ficheiros[0]" [alt]="project.data.titulo | mapLang" style="height: 500px; width: 100%; object-fit: cover;" alt="">
+                  <a class="case-overlay text-decoration-none" [href]="'projectos/' + (project.data.slug | mapLang)">
+                      <small>{{project.data.titulo | mapLang}}</small>
+                      <h5 class="lh-base text-white mb-3">{{project.data.descricao | mapLang}}
                       </h5>
                       <span class="btn btn-square bgcol"><fa-icon [icon]="faArrowRight"></fa-icon></span>
                   </a>

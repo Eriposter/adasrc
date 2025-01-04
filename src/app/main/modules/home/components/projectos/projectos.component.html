@@ -45,7 +45,7 @@
           <img class="img-fluid" style="width: 100%; height: 270px; object-fit: cover;" [src]="project.data.ficheiros[0]" [alt]="project.data.titulo">
           <div class="portfolio-btn">
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" [href]="project.data.ficheiros[0]" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="#"><i class="fa fa-link"></i></a>
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" [href]="'projectos/' + (project.data.slug | mapLang)"><i class="fa fa-link"></i></a>
           </div>
         </div>
         <div class="pt-3">
