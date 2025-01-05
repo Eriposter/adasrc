@@ -14,25 +14,13 @@
   "header": {
     "inicio": "Home",
     "sobre": {
-      "titulo": "About",
-      "sobreNos": "About us",
-      "orgaos": "Organs",
-      "atribuicoes": "Attributions"
+      "titulo": "About Us"
     },
-    "legislacao": {
-      "titulo": "Legislation",
-      "se": "Business Sector",
-      "sp": "Public Sector"
+    "servicos": {
+      "titulo": "Services"
     },
-    "imprensa": {
-      "titulo": "Press Room",
-      "noticias": "News",
-      "galeria": "Gallery",
-      "publicacoes": "Publications",
-      "comunicados": "Statements",
-      "faq": "Frequently Asked Questions"
-    },
-    "contacto": "Contact"
+    "contacto": "Contact",
+        "projectos": "Projects"
   },
   "home": {
     "banner": {

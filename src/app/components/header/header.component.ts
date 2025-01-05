@@ -2,27 +2,32 @@ import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { Router, RouterModule } from '@angular/router';
+import { ServicosService } from '../../../shared/services/servicos.service';
+import { MapLangPipe } from '../../../shared/pipes/map-lang.pipe';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ RouterModule, SharedModule, TranslateModule],
+  imports: [RouterModule, SharedModule, TranslateModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  providers: [MapLangPipe]
 })
 export class HeaderComponent implements OnInit {
   countries: any[] | undefined;
   selectedCountry: any;
-  lang: string | undefined;
+  lang: string = 'pt'; // Define um valor padrão inicial
   activeMenuItem: number | null = null;
   screenWidth!: number;
   showSubmenu: boolean = false;
   isOpaque: boolean = false;
+  servicos: any[] = []; // Para armazenar os serviços dinâmicos
 
-  private tranlsateService = inject(TranslateService)
 
-  constructor(public router: Router) {}
+  private translateService = inject(TranslateService);
+  private mapLangPipe = inject(MapLangPipe); // Injeta o MapLangPipe
 
+  constructor(public router: Router, private servicosService: ServicosService) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
@@ -30,7 +35,11 @@ export class HeaderComponent implements OnInit {
     this.isOpaque = window.scrollY > scrollThreshold;
   }
 
-  menu = [
+  menu: {
+    name: string;
+    url: string;
+    submenu?: { name: string; url: string; icon?: string }[];
+  }[] = [
     {
       name: 'header.inicio',
       url: '/',
@@ -39,94 +48,11 @@ export class HeaderComponent implements OnInit {
       name: 'header.sobre.titulo',
       url: 'sobre',
     },
-    // {
-    //   name: 'header.sobre.titulo',
-    //   submenu: [
-    //     {
-    //       name: 'header.sobre.sobreNos',
-    //       url: 'sobre',
-    //       icon: 'assets/header/menu icon.png',
-    //     },
-    //     {
-
-    //       name: 'header.sobre.orgaos',
-    //       url: 'sobre/estrutura',
-    //       icon: 'assets/header/orgao-icon.png',
-    //     },
-    //     {
-    //       name: 'header.sobre.atribuicoes',
-    //       url: 'sobre/atribuicoes',
-    //       icon: 'assets/header/atribuicoes-icon.png',
-    //     }
-    //   ],
-    // },
     {
       name: 'header.servicos.titulo',
       url: 'servicos',
-      submenu: [
-        {
-          name: 'header.servicos.sr',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        },
-        {
-          name: 'header.servicos.gm',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        },
-        {
-          name: 'header.servicos.er',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        },
-        {
-          name: 'header.servicos.ps',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        },
-        {
-          name: 'header.servicos.sv',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        },
-        {
-          name: 'header.servicos.sh',
-          url: 'legislacao/sector-empresarial',
-          icon: 'assets/header/sec-empresarial-icon.png',
-        }
-
-      ],
+      submenu: [], // Inicialize como um array vazio, mas agora com o tipo definido
     },
-    // {
-    //   name: 'header.imprensa.titulo',
-    //   submenu: [
-    //     {
-    //       name: 'header.imprensa.noticias',
-    //       url: 'sala-de-imprensa/noticias',
-    //       icon: 'assets/header/news-icon.png',
-    //     },
-    //     {
-    //       name: 'header.imprensa.galeria',
-    //       url: 'sala-de-imprensa/galerias',
-    //       icon: 'assets/header/galeria-icon.png',
-    //     },
-    //     {
-    //       name: 'header.imprensa.publicacoes',
-    //       url: 'sala-de-imprensa/publicacoes',
-    //       icon: 'assets/header/pub-icon.png',
-    //     },
-    //     {
-    //       name: 'header.imprensa.comunicados',
-    //       url: 'sala-de-imprensa/comunicados',
-    //       icon: 'assets/header/comunicados-icon.png',
-    //     },
-    //     {
-    //       name: 'header.imprensa.faq',
-    //       url: 'sala-de-imprensa/perguntas-frequentes',
-    //       icon: 'assets/header/faq-icon.png',
-    //     }
-    //   ],
-    // },
     {
       name: 'header.projectos',
       url: 'projectos',
@@ -137,35 +63,58 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
+
   ngOnInit() {
-      this.screenWidth = window.innerWidth;
+    this.screenWidth = window.innerWidth;
     this.countries = [
       { name: 'AO', code: 'pt' },
       { name: 'EN', code: 'en' },
     ];
 
-    this.lang = localStorage.getItem('lang') || 'pt';
+    this.lang = localStorage.getItem('lang') || 'pt'; // Obtém o idioma salvo ou usa o padrão
+    this.loadServicos(); // Chama o método para carregar os serviços
     const savedLang = localStorage.getItem('lang');
     if (savedLang) {
-      this.selectedCountry = this.countries.find(country => country.code === savedLang);
-      this.changeLanguage(savedLang, false)
+      this.selectedCountry = this.countries.find(
+        (country) => country.code === savedLang
+      );
+      this.changeLanguage(savedLang, false);
     }
   }
-
 
   setActiveMenuItem(index: number): void {
     this.activeMenuItem = index;
   }
-  changeLanguage(lang : string, reload: boolean = true){
-    this.tranlsateService.use(lang);
+
+  changeLanguage(lang: string, reload: boolean = true) {
+    this.translateService.use(lang);
     localStorage.setItem('lang', lang);
     if (reload) {
       window.location.reload();
     }
-
   }
 
   toggleSubmenu(): void {
     this.showSubmenu = !this.showSubmenu;
   }
+
+  private loadServicos(): void {
+    this.servicosService.getProjecto().subscribe((response) => {
+      this.servicos = response.items.map((item) => ({
+        name: this.mapLangPipe.transform(item.data.titulo), // Aplica o pipe para mapear o idioma
+        url: `servicos/${this.mapLangPipe.transform(item.data.slug)}`, // Adapta ao formato do URL
+        icon: item.data.imagem?.[0] || '', // Usa o ícone se disponível
+      }));
+
+      const servicosMenu = this.menu.find(
+        (menuItem) => menuItem.name === 'header.servicos.titulo'
+      );
+      if (servicosMenu) {
+        servicosMenu.submenu = this.servicos;
+      }
+    });
+  }
+
+
+
 }

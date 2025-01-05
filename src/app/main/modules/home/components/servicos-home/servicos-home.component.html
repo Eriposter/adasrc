@@ -5,43 +5,17 @@
       <h6 class="color">Nossos Serviços</h6>
       <h1 class="mb-4">Somos pioneiros no fabricação das tintas</h1>
     </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="800">
+    <div class="row g-4" >
+      <div *ngFor="let project of projecto | slice: 0:3 let i = index" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="800">
         <div class="service-item rounded overflow-hidden">
-          <img class="img-fluid" src="assets/img/sobre-nos.jpg" alt="">
+          <img class="img-fluid imagem" [src]="project.data.imagem[0]" [alt]="project.data.titulo | mapLang" alt="">
           <div class="position-relative p-4 pt-0">
             <div class="service-icon">
               <fa-icon [icon]="faSolarPanel" class="fa fa-3x color"></fa-icon>
             </div>
-            <h4 class="mb-3">Sinalização Horizontal</h4>
-            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-            <a class="small fw-medium color" href="">Saiba mais <fa-icon [icon]="faArrowRight" class="fa"></fa-icon></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="1500">
-        <div class="service-item rounded overflow-hidden">
-          <img class="img-fluid" src="assets/img/servicos.jpg" alt="">
-          <div class="position-relative p-4 pt-0">
-            <div class="service-icon">
-              <fa-icon [icon]="faSolarPanel" class="fa fa-3x color"></fa-icon>
-            </div>
-            <h4 class="mb-3">Pórtico de Sinalização</h4>
-            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-            <a class="small fw-medium color" href="">Saiba mais <fa-icon [icon]="faArrowRight" class="fa"></fa-icon></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s" data-aos="fade-up" data-aos-duration="2100">
-        <div class="service-item rounded overflow-hidden">
-          <img class="img-fluid" src="assets/img/servicos.jpg" alt="">
-          <div class="position-relative p-4 pt-0">
-            <div class="service-icon">
-              <fa-icon [icon]="faSolarPanel" class="fa fa-3x color"></fa-icon>
-            </div>
-            <h4 class="mb-3">Sinalização Vertical</h4>
-            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-            <a class="small fw-medium color" href="">Saiba mais <fa-icon [icon]="faArrowRight" class="fa"></fa-icon></a>
+            <h4 class="mb-3">{{ project.data.titulo | mapLang }}</h4>
+            <p>{{ project.data.sumario | mapLang }}</p>
+            <a class="small fw-medium color" [href]="'servicos/' + (project.data.slug | mapLang)" >Saiba mais <fa-icon [icon]="faArrowRight" class="fa"></fa-icon></a>
           </div>
         </div>
       </div>
