@@ -31,14 +31,10 @@
       <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
         <img [src]="servico?.data?.imagem" [alt]="servico?.data?.titulo" class="img-fluid services-img">
         <h3>{{servico?.data?.titulo | mapLang}}</h3> <br>
-        <p style="text-align: justify;">
-          {{servico?.data?.descricao | mapLang}}
+        <h6>{{servico?.data?.sumario | mapLang}}</h6> <br>
+        <p style="text-align: justify;" [innerHTML]="servico?.data?.descricao | mapLang">
+
         </p>
-        <ul>
-          <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-          <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-          <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-        </ul>
       </div>
 
     </div>

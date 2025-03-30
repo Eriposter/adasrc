@@ -23,13 +23,13 @@ export class FooterComponent  {
       icon: 'assets/footer/icon-location.svg',
     },
     {
-      description: ' +244 222 700 000',
-      action: 'tel: +244 222 700 000',
+      description: ' +244 927 994 247',
+      action: 'tel: +244 927 994 247',
       icon: 'assets/footer/icon-phone.svg',
     },
     {
-      description: 'correspondencia.cnnca@minfin.gov.ao',
-      action: 'mailto:correspondencia.cnnca@minfin.gov.ao',
+      description: 'geral@dasrc.ao',
+      action: 'mailto:geral@dasrc.ao',
       icon: 'assets/footer/icon-mail.svg',
     },
   ];
